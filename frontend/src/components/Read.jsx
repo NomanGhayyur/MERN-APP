@@ -23,6 +23,28 @@ function Read() {
     getData();
   }, []);
 
+  const handleDelete = async (id) => {
+    const response = await fetch(
+      `http://localhost:5000/api/user/deleteuser/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+    const result = await response.json();
+
+    if (!response.ok) {
+      setError(result.error);
+    }
+    if (response.ok) {
+      setError("Delete Successfully");
+
+      setTimeout(() => {
+        setError("");
+        getData();
+      }, 2000);
+    }
+  };
+
   console.log(data, "data");
 
   return (
@@ -46,7 +68,11 @@ function Read() {
                 <a href="/update" className="card-link">
                   Edit
                 </a>
-                <a href="" className="card-link">
+                <a
+                  href=""
+                  className="card-link"
+                  onClick={() => handleDelete(data?._id)}
+                >
                   Delete
                 </a>
               </div>
