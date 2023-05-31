@@ -1,6 +1,6 @@
 # MERN CRUD
 
-[MERN CRUD] is a full-stack web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack, following the MVC (Model-View-Controller) architectural pattern. It provides a comprehensive solution for performing CRUD (Create, Read, Update, Delete) operations on [specify the type of data your project deals with, e.g., "products," "tasks," "contacts"].
+MERN CRUD is a full-stack web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack, following the MVC (Model-View-Controller) architectural pattern. It provides a comprehensive solution for performing CRUD (Create, Read, Update, Delete) operations on users.
 
 ## Table of Contents
 
@@ -13,10 +13,10 @@
 
 ## Features
 
-- Create: Users can create new [data type].
-- Read: Users can retrieve [data type] from the database.
-- Update: Users can update existing [data type] information.
-- Delete: Users can delete [data type] from the database.
+- Create: Users can create new user having a "name", "email", & "age".
+- Read: Users can retrieve all users from the database.
+- Update: Users can update existing "name", "email", & "age" information of any specific _id.
+- Delete: Users can delete the entire data of any specific _id from the database.
 
 ## Installation
 
