@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Read() {
   const [data, setData] = useState();
@@ -57,29 +58,39 @@ function Read() {
 
       <h2 className="text-center">User List</h2>
 
-      <div className="row">
-        {data?.map((data) => (
-          <div key={data._id} className="col-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">{data.name}</h5>
-                <p className="card-subtitle mb-2 text-muted">{data.email}</p>
-                <p className="card-text">{data.age}</p>
-                <a href="/update" className="card-link">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data?.map((data) => (
+            <tr key={data._id}>
+              <th scope="row">1</th>
+              <td>{data?.name}</td>
+              <td>{data?.email}</td>
+              <td>{data?.age}</td>
+              <td>
+                <Link to={`/update/${data?._id}`} className="card-link m-2">
                   Edit
-                </a>
+                </Link>
                 <a
                   href=""
-                  className="card-link"
+                  className="card-link m-2"
                   onClick={() => handleDelete(data?._id)}
                 >
                   Delete
                 </a>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
