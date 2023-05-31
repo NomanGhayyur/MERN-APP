@@ -35,8 +35,8 @@ router.get("/userlist", async (req, res) => {
         console.log(error);
         res.status(400).json({ error: error.message });
     }
-    res.send("api running");
 });
+
 
 router.get("/userdetails/:id", async (req, res) => {
     try {
@@ -48,7 +48,7 @@ router.get("/userdetails/:id", async (req, res) => {
         console.log(error);
         res.status(400).json({ error: error.message });
     }
-    res.send("api running");
+
 });
 
 router.delete("/deleteuser/:id", async (req, res) => {
@@ -63,7 +63,7 @@ router.delete("/deleteuser/:id", async (req, res) => {
         console.log(error);
         res.status(400).json({ error: error.message });
     }
-    res.send("api running");
+
 });
 
 router.patch("/updateuser/:id", async (req, res) => {
@@ -82,7 +82,7 @@ router.patch("/updateuser/:id", async (req, res) => {
         console.log(error);
         res.status(500).json({ error: error.message });
     }
-    res.send("api running");
+
 });
 
 module.exports = router;
