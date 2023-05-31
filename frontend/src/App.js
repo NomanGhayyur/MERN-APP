@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path='/create' element={<Create />} />
-          <Route exact path='/all' element={<Read />} />
+          <Route exact path='/userlist' element={<Read />} />
           <Route exact path='/update' element={<Update />} />
         </Routes>
       </BrowserRouter>
