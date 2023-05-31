@@ -22,12 +22,16 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/" className="nav-link" aria-current="page">
+              <Link to="/create" className="nav-link" aria-current="page">
                 Create Post
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/all" className="nav-link active" aria-current="page">
+              <Link
+                to="/userlist"
+                className="nav-link active"
+                aria-current="page"
+              >
                 All Post
               </Link>
             </li>
