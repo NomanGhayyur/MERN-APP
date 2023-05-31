@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState(0);
-  console.log("Creating", name, email, age);
+  const [error, setError] = useState("");
+  const [response, setResponse] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -21,14 +25,32 @@ function Create() {
 
     if (!response.ok) {
       console.error(result.error);
+      setError(result.error);
     }
     if (response.ok) {
       console.log(result);
+      setResponse(result.message);
+      setError("");
+      setName("");
+      setEmail("");
+      setAge(0);
+      navigate("/userlist");
     }
   };
 
   return (
     <div className="container my-2">
+      {error && (
+        <div class="alert alert-danger" role="alert">
+          {error}
+        </div>
+      )}
+      {response && (
+        <div class="alert alert-success" role="alert">
+          {response}
+        </div>
+      )}
+
       <h2>Enter the Data</h2>
 
       <form onSubmit={handleSubmit}>
