@@ -66,23 +66,32 @@ MERN CRUD is a full-stack web application built using the MERN (MongoDB, Express
 
 ## Usage
 
-[Provide instructions on how to use your application. Include any specific details or steps necessary for users to perform CRUD operations.]
+1. Create:
+   To create a new user, navigate to the user creation form.
+   Enter the following details:
+   - Name: [User's name]
+   - Email: [User's email]
+   - Age: [User's age]
+   - Submit the form.
+   - A new user will be created with the provided information.
 
-1. Create [data type]:
-   - [Explain how users can create a new instance of the data type.]
+2. Read:
+   - To retrieve all users, navigate to the user list page.
+   - All users will be displayed with their respective information.
 
-2. Read [data type]:
-   - [Explain how users can view existing instances of the data type.]
+3. Update:
+   - To update user information, navigate to the user list page.
+   - Click on the edit button for the user whose information you want to update.
+   - Modify the user's details (name, email, age) as required.
+   - Save the changes.
+   - The user's information will be updated with the new values.
 
-3. Update [data type]:
-   - [Explain how users can update the information of an existing instance of the data type.]
-
-4. Delete [data type]:
-   - [Explain how users can delete an existing instance of the data type.]
+4. Delete:
+   - To delete a user, navigate to the user list page.
+   - Click on the delete button for the user you want to delete.
+   - The user will be permanently removed from the system.
 
 ## MVC Architecture
-
-[Explain the MVC architecture of your project and how it is implemented.]
 
 The project source code is divided into two main parts: the frontend and the backend.
 
@@ -96,24 +105,17 @@ The backend, located in the `backend` directory, consists of the server, models,
 
 ## API Endpoints
 
-[If your project has a RESTful API, provide a
-
- list of the available endpoints along with a brief description of each endpoint.]
-
-- `GET /api/[endpoint]`: [Description]
-- `POST /api/[endpoint]`: [Description]
-- `PUT /api/[endpoint]/:id`: [Description]
-- `DELETE /api/[endpoint]/:id`: [Description]
+- `GET /api/user/userlist`: To retrieve all users
+- `POST /api/user/createuser`: To create new user
+- `PATCH /api/user/updateuser/:id`: To update user
+- `DELETE /api/user/deleteuser/:id`: To delete user
 
 ## Contributing
 
-[Explain how others can contribute to your project. Include guidelines for submitting bug reports, feature requests, or pull requests.]
-
-If you find a bug or have a feature request, please [open an issue](https://github.com/[username]/[repository]/issues).
+If you find a bug or have a feature request, please [open an issue](https://github.com/[nomanghayyur]/[MERN-APP]/issues).
 
 ## License
 
-[Specify the license under which your project is distributed. For example:]
 
 This project is licensed under the [MIT License](LICENSE.md).
 
