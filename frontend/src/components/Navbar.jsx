@@ -5,8 +5,10 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <h3 className="navbar-brand" href="#">
-          MERN
+        <h3 className="navbar-brand">
+          <Link to="/" className="nav-link" aria-current="page">
+            MERN
+          </Link>
         </h3>
         <button
           className="navbar-toggler"
@@ -33,15 +35,6 @@ export default function Navbar() {
                 aria-current="page"
               >
                 All Post
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/update"
-                className="nav-link active"
-                aria-current="page"
-              >
-                Update Post
               </Link>
             </li>
           </ul>
